@@ -893,7 +893,7 @@ main>#man_esquerdo>a {
     
     
 }
-@media (max-width:400px){
+@media (max-width:420px){
     #cont{
         position: relative;
         display: flex;
