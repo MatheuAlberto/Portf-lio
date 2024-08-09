@@ -25,6 +25,7 @@ header {
     line-height: 15px;
     border: solid 1px black;
     box-shadow: 1px 1px 10px black;
+    flex-wrap: wrap;
 
 }
 
@@ -40,6 +41,9 @@ header>p {
 header>ul {
     list-style: none;
     display: flex;
+    flex-wrap: wrap;
+    padding-right: 70px;
+
 
 }
 
@@ -54,17 +58,14 @@ header>ul>li>a {
     padding: 7px 10px;
     margin-right: 10px;
 }
-#ll{
-    margin-right: 120px;
-}
 
 hr {
     margin: 0;
 }
 
 main {
+    width: 100vw;
     margin-top: 70px;
-    padding: 0px 70px;
     display: flex;
     font-family: lobster;
     height: 250px;
@@ -77,7 +78,7 @@ main {
 }
 
 #man_esquerdo {
-    padding: 40px 0px;
+    padding: 40px 0px 0px 70px;
     width: 60%;
     line-height: 10px;
 }
@@ -188,32 +189,31 @@ main>#man_esquerdo>a {
 #informacoes {
     position: relative;
     top: -12px;
-    width: 80%;
-    height: 280px;
-    margin: 0 auto;
+    left: 0;
+    width: 100vw;
+    height: 300px;
     z-index: 1;
     background-color: #49424A;
     display: flex;
     align-items: center;
     color: white;
     border: 0.05px solid black;
-    box-shadow: 5px 5px 5px black;
-
+    box-shadow: 0px 5px 5px black;
+    margin: none;
     animation: caindo 2s ease;
 }
 
 #informacoes>#img_secundária {
-    padding-top: 20px;
-    width: 250px;
+    padding: 0px 20px 0px 70px;
+    width: 20%;
 }
 
 #informacoes>#img_secundária>img {
-    width: 200px;
+    width: 100%;
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
     background-color: white;
-    margin: 0 20px;
 
     transition-property: transform;
     transition-duration: 1.5s;
@@ -222,27 +222,39 @@ main>#man_esquerdo>a {
 
 #informacoes>#lado_direito {
     width: 80%;
-    padding-right: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    padding-right: 70px;
 }
 
 #informacoes>#lado_direito>h1 {
     font-size: 30pt;
     font-family: lobster;
     color: black;
+    margin: 0px 0px 10px;
 }
-
+#informacoes>#lado_direito>p {
+    font-family: 'Roboto';
+    margin: 0;
+    font-weight: 500;
+    line-height: 30px;
+}
 #rodape {
     position: relative;
     bottom: 24px;
+    width: 100vw;
     height: 200px;
     background-color: #842A34;
-    border: 1px solid black;
-    box-shadow: 0px 3px 5px black;
+    border: 2px solid black;
+    box-shadow: 0px 5px 10px black;
+
 
     animation: ld-esquerdo 2.5s ease;
 }
 
 #skills {
+    width: 100vw;
     text-align: center;
     margin-bottom: 25px;
 }
@@ -304,6 +316,7 @@ main>#man_esquerdo>a {
     position: relative;
     text-align: center;
     background-color: #842A34;
+    width: 100vw;
     height: 450px;
     box-shadow: 0px 5px 5px black;
     border: solid 1px black;
@@ -495,6 +508,7 @@ main>#man_esquerdo>a {
 
 
 #cont {
+    width: 100vw;
     position: relative;
     display: flex;
     justify-content: space-between;
@@ -773,12 +787,13 @@ main>#man_esquerdo>a {
     #pai{
         display: block;
         background: #842A34;
-        width: 100%;
+        width: 100vw;
         height: 80px;
         background-size: cover;
     }
     
     #men {
+        margin-top: 10px;
         width: 230px;
         background-color: rgba(69, 69, 70, 0.5);
         height: 220px;
@@ -877,4 +892,44 @@ main>#man_esquerdo>a {
     }
     
     
+}
+@media (max-width:400px){
+    #cont{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+    }
+    #cont>h1{
+        position: absolute;
+        top: 15px;
+        width: 100%;
+        height: 50px;
+        margin: 0 auto;
+
+    }
+    #cont_ladoesquerdo{
+        width: 100vw;
+    }
+    #cont>#cont_ladoesquerdo>a {
+        position: relative;
+        list-style: none;
+        text-decoration: none;
+        color: white;
+        display: flex;
+        line-height: 40px;
+        gap: 20px;
+        margin: 20px;
+        font-family: 'Roboto';
+        cursor: pointer;
+        margin: 5px 0px;
+    }
+    
+    #cont_ladodireito {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        padding-top: 20px;
+        margin: 0px;
+        gap: 0px;
+    }
 }
